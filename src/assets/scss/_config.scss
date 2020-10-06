@@ -1,0 +1,28 @@
+$color-primary: #b0b5b9;
+$color-secondary: #44495a;
+$grey-100: #fdfdfd;
+$grey-300: #9ca4ab;
+$grey-400: #c7cad1;
+$grey-500: #6f7377;
+$grey-600: #999999;
+$blue-400: #1188ff;
+$orange-400: orange;
+
+$font-family: "Open Sans", sans-serif "Heebo", sans-serif;
+
+///set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-backgorund($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//
+// @include set-background($primary-color)

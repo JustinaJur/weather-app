@@ -1,0 +1,43 @@
+@import "./assets/scss/config";
+@import "./assets/scss/utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-secondary;
+  // background-color: lighten($color-secondary, 30%);
+  font-family: $font-family;
+  line-height: 17px;
+  color: $grey-100;
+}
+
+.forecast-icon {
+  max-width: 30px;
+}
+
+.forecast-title {
+  font-weight: 300;
+  // padding: 10px 10px;
+}
+
+.forecast-temperature {
+  display: flex;
+  margin-left: auto;
+  font-size: 20px;
+
+  &--day {
+    color: $grey-100;
+  }
+
+  &--night {
+    color: $grey-600;
+  }
+
+  p {
+    padding: 0 3px;
+  }
+}

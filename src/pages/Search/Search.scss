@@ -1,0 +1,50 @@
+@import "../../assets/scss/config";
+@import "../../assets/scss/utilities";
+
+.search-input {
+  display: grid;
+  position: relative;
+  padding-bottom: 15px;
+
+  input[type="text"],
+  textarea {
+    background-color: $grey-500;
+    border: 1px solid $blue-400;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 20px;
+    padding: 0px 35px;
+    height: 30px;
+  }
+
+  .fa {
+    color: $grey-100;
+  }
+
+  .fa-search {
+    position: absolute;
+    top: 7px;
+    left: 26px;
+  }
+
+  .fa-times-circle {
+    position: absolute;
+    top: 7px;
+    right: 26px;
+  }
+}
+
+.cities {
+  padding-left: 26px;
+  background-color: $grey-500;
+}
+
+.cities-item {
+  padding: 15px 15px 15px 0px;
+  color: $grey-600;
+  border-bottom: 1px solid $grey-600;
+
+  &--highlighted {
+    color: $grey-100;
+  }
+}

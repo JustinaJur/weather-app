@@ -1,0 +1,11 @@
+@import "../../assets/scss/config";
+@import "../../assets/scss/utilities";
+
+.header {
+  padding: 20px 0px 10px 0px;
+  @extend .text-align--center;
+
+  &--dark {
+    color: $grey-600;
+  }
+}

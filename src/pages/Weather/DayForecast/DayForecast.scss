@@ -1,0 +1,15 @@
+@import "../../../assets/scss/config";
+@import "../../../assets/scss/utilities";
+
+.day-forecast__header {
+  display: flex;
+  padding: 10px 10px;
+}
+
+.day-forecast__body {
+  @extend .text-align--center;
+  background-color: #9ca4ab;
+  //backdrop-filter: blur(5px);
+  display: grid;
+  grid-gap: 50px;
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/scss/config";
+@import "../../../assets/scss/utilities";
+
+.week-forecast {
+  padding: 10px;
+  @extend .flex;
+  @extend .justify-content--space-between;
+  background-color: $grey-300;
+}

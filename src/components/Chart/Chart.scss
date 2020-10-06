@@ -1,0 +1,29 @@
+@import "../../assets/scss/config";
+@import "../../assets/scss/utilities";
+
+.chart {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+
+  tbody {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .chart__collumn {
+    width: 30px;
+    border-bottom: none;
+
+    &--light {
+      background-color: $orange-400;
+      border-top: 4px solid lighten($orange-400, 20%);
+    }
+
+    &--dark {
+      background-color: darken($blue-400, 20%);
+      border-top: 3px solid lighten($blue-400, 20%);
+    }
+  }
+}

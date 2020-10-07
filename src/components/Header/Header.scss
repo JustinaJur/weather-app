@@ -2,10 +2,10 @@
 @import "../../assets/scss/utilities";
 
 .header {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.1;
-  letter-spacing: 2px;
-  padding: 20px 0px 10px 0px;
+  letter-spacing: 0.125rem;
+  padding: 1.25rem 0rem 0.625rem 0rem;
   height: 10%;
   @extend .text-align--center;
 

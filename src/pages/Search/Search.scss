@@ -4,41 +4,41 @@
 .search-input {
   display: grid;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
 
   input[type="text"],
   textarea {
     background-color: $grey-500;
     border: 1px solid $blue-400;
-    border-radius: 5px;
+    border-radius: 0.375rem;
     color: white;
-    margin: 8px 20px 0px 20px;
-    padding: 0px 35px;
-    height: 30px;
+    margin: 0.5rem 1.25rem 0rem 1.25rem;
+    padding: 0rem 2rem;
+    height: 2.2rem;
   }
 
   .fa {
     color: $grey-100;
-    top: 15px;
+    top: 1.125rem;
     position: absolute;
 
     &-search {
-      left: 26px;
+      left: 1.625rem;
     }
 
     &-times-circle {
-      right: 26px;
+      right: 1.625rem;
     }
   }
 }
 
 .cities {
-  padding-left: 26px;
+  padding-left: 1.625rem;
   background-color: $grey-500;
 
   &-item {
-    font-size: 18px;
-    padding: 15px 15px 15px 0px;
+    font-size: 1.125rem;
+    padding: 1rem 1rem 1rem 0rem;
     color: $grey-400;
     border-bottom: 1px solid $grey-400;
 

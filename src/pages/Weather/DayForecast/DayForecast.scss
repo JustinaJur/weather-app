@@ -14,7 +14,7 @@
 
   &__header {
     display: flex;
-    padding-right: 15px;
+    padding-right: 1rem;
     background-color: $color-secondary;
   }
 
@@ -26,12 +26,12 @@
     place-items: center;
 
     &-temp {
-      font-size: 80px;
+      font-size: 5rem;
       align-self: end;
     }
 
     &-location {
-      font-size: 24px;
+      font-size: 1.5rem;
       align-self: end;
     }
 
@@ -41,7 +41,7 @@
 
       p {
         align-self: center;
-        font-size: 18px;
+        font-size: 1.125rem;
       }
     }
   }

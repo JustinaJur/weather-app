@@ -5,13 +5,13 @@
   display: block;
   position: relative;
   width: 100%;
-  min-height: 100px;
+  min-height: 6.5rem;
   display: flex;
   justify-content: center;
 
   tbody {
     position: absolute;
-    bottom: 0px;
+    bottom: 0rem;
   }
 
   .chart__collumn {

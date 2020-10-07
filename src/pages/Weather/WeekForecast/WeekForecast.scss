@@ -2,7 +2,7 @@
 @import "../../../assets/scss/utilities";
 
 .week-forecast {
-  padding: 10px 0px 0px 0px;
+  padding: 0.625rem 0rem 0rem 0rem;
   @extend .flex;
   @extend .justify-content--space-between;
   background: rgb(111, 115, 119);

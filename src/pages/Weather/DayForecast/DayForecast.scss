@@ -19,7 +19,7 @@
   }
 
   &__body {
-    @extend .text-align--center;
+    text-align: center;
     display: grid;
     grid-template-rows: 2fr 1.5fr 2fr;
     height: 85%;

@@ -1,18 +1,4 @@
 @import "./assets/scss/config";
-@import "./assets/scss/utilities";
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* use viewport-relative units to cover page fully */
-#root,
-body {
-  height: 100vh;
-  width: 100vw;
-}
 
 * {
   box-sizing: border-box;
@@ -56,5 +42,11 @@ a {
 
   p {
     padding: 0rem 0.25rem;
+  }
+
+  @media only screen and (max-width: 320px) {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -1,5 +1,4 @@
 @import "../../assets/scss/config";
-@import "../../assets/scss/utilities";
 
 .header {
   font-size: 1.125rem;
@@ -7,7 +6,7 @@
   letter-spacing: 0.125rem;
   padding: 1.25rem 0rem 0.625rem 0rem;
   height: 10%;
-  @extend .text-align--center;
+  text-align: center;
 
   &-item--dark {
     color: $grey-600;

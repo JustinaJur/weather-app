@@ -3,8 +3,7 @@
 
 .week-forecast {
   padding: 0.625rem 0rem 0rem 0rem;
-  @extend .flex;
-  @extend .justify-content--space-between;
+  display: flex;
   background: rgb(111, 115, 119);
   background: linear-gradient(172deg, rgba(111, 115, 119, 1) 0%, rgba(68, 73, 90, 1) 27%, rgba(151, 155, 164, 1) 63%);
 

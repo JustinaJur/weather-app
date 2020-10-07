@@ -7,8 +7,6 @@ import cities from "../../data/city.list.json";
 const Search = (props) => {
   const [term, setTerm] = useState("");
 
-  //console.log(props.history.location.state.location);
-
   const onCityClick = (city) => {
     props.history.push({
       pathname: "/",

@@ -13,63 +13,56 @@ const Weather = (props) => {
   const [forecast, setForecast] = useState({});
   const [coordinates, setCoordinates] = useState({});
 
-  //const { city } = (props.location && props.location.state) || {};
-  //console.log(props.location.state);
-
   const getWeather = async () => {
-    const coord = {
-      lat: props.location.state?.coord.lat,
-      lon: props.location.state?.coord.lon,
-    };
-
-    if (
-      typeof props.location.state !== "undefined"
-      //&&
-      //!navigator["geolocation"]
-    ) {
-      const data = await getCityData(coord.lat, coord.lon);
-      console.log("change");
-      setForecast(data);
+    let coord;
+    if (typeof props.location.state !== "undefined") {
+      coord = {
+        lat: props.location.state?.coord.lat,
+        lon: props.location.state?.coord.lon,
+      };
     } else {
-      console.log("old");
-      const data = await getCityData(coordinates.lat, coordinates.lon);
+      coord = coordinates;
+    }
+
+    try {
+      const data = await getCityData(coord.lat, coord.lon);
       setForecast(data);
+    } catch (err) {
+      console.log(err.message);
     }
   };
 
-  useEffect(() => {
+  const getLocation = () => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          console.log("kalusiu location", navigator);
           const coordinates = {
             lat: position.coords.latitude,
             lon: position.coords.longitude,
           };
           setCoordinates(coordinates);
-          // const data = getCityData(coordinates.lat, coordinates.lon);
-          // setForecast(data);
         },
         (error) => {
-          const vilniusCoord = {
+          const defaultLocation = {
             lat: "54.68",
             lon: "25.31",
           };
-          setCoordinates(vilniusCoord);
+          setCoordinates(defaultLocation);
         }
       );
     }
+  };
 
+  useEffect(() => {
+    getLocation();
     measureScreenHeight();
   }, []);
 
   useEffect(() => {
-    if (Object.keys(coordinates).length > 0) {
-      getWeather();
-    }
+    Object.keys(coordinates).length > 0 && getWeather();
   }, [coordinates]);
 
-  const { daily, current, timezone } = forecast;
+  const { daily, current, timezone } = forecast || {};
   const location = timezone?.split("/").pop();
 
   return (

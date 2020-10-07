@@ -1,10 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "a6de0894081a4984f87a9de3f599d126";
-
-//("d45bd462c2cd1dbd1d4da10486a4b9cc");
-
-// "a6de0894081a4984f87a9de3f599d126";
+const API_KEY = "d1611a45987a47dfa73a3b2b26c5a93f";
 
 const getCityData = async (latitude, longitude) => {
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude=minutely,hourly&appid=${API_KEY}`;

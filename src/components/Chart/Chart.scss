@@ -1,21 +1,12 @@
 @import "../../assets/scss/config";
 
 .chart {
-  display: block;
-  position: relative;
-  width: 100%;
-  min-height: 6.5rem;
   display: flex;
-  justify-content: center;
+  padding-top: 0.625rem;
 
-  tbody {
-    position: absolute;
-    bottom: 0rem;
-  }
-
-  .chart__collumn {
-    width: 1.5rem;
-    border-bottom: none;
+  &__collumn {
+    width: 100%;
+    align-self: flex-end;
 
     &--light {
       background-color: $orange-600;

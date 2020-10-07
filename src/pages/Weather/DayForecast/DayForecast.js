@@ -10,10 +10,10 @@ const DayForecast = ({ daily, current, location }) => {
         <h3 className="forecast-title">Day Forecast</h3>
         <div className="forecast-temperature">
           <p className="forecast-temperature--day flex align-items--center">
-            {Math.round(daily[0].temp.min)}
+            {Math.round(daily[0].temp.day)}
           </p>
           <p className="forecast-temperature--night flex align-items--center">
-            {Math.round(daily[0].temp.max)}
+            {Math.round(daily[0].temp.night)}
           </p>
         </div>
       </div>

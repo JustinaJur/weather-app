@@ -12,13 +12,13 @@ const WeekForecast = ({ dailyForecast }) => {
       <h3 className="forecast-title">Week Forecast</h3>
       <div className="week-forecast">
         {daysOfNextWeek.map((day, index) => {
-          const minTemp = Math.round(dailyForecast[index + 1].temp.min);
-          const maxTemp = Math.round(dailyForecast[index + 1].temp.max);
+          const dayTemp = Math.round(dailyForecast[index + 1].temp.day);
+          const nightTemp = Math.round(dailyForecast[index + 1].temp.night);
 
           return (
             <div key={index} className="week-forecast__body">
               {day.toUpperCase()}
-              <div className="text-align--center">
+              <div>
                 <img
                   className="forecast-icon"
                   alt="weather"
@@ -27,11 +27,11 @@ const WeekForecast = ({ dailyForecast }) => {
                   }@2x.png`}
                 />
                 <div className="forecast-temperature">
-                  <p className="forecast-temperature--day">{minTemp}</p>
-                  <p className="forecast-temperature--night">{maxTemp}</p>
+                  <p className="forecast-temperature--day">{dayTemp}</p>
+                  <p className="forecast-temperature--night">{nightTemp}</p>
                 </div>
               </div>
-              <Chart minTemp={minTemp} maxTemp={maxTemp} />
+              <Chart dayTemp={dayTemp} nightTemp={nightTemp} />
             </div>
           );
         })}

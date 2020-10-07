@@ -8,9 +8,9 @@
   background: linear-gradient(172deg, rgba(111, 115, 119, 1) 0%, rgba(68, 73, 90, 1) 27%, rgba(151, 155, 164, 1) 63%);
 
   &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    text-align: center;
     width: 100%;
   }
 }

@@ -62,7 +62,8 @@ const Weather = (props) => {
     Object.keys(coordinates).length > 0 && getWeather();
   }, [coordinates]);
 
-  const { daily, current, timezone } = forecast || {};
+  const { daily, current, timezone } = forecast;
+
   const location = timezone?.split("/").pop();
 
   return (

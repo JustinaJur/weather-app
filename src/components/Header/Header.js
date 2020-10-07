@@ -4,8 +4,8 @@ import "./Header.scss";
 const Header = ({ title, location }) => {
   return (
     <div className="header">
-      <h4>{title}</h4>
-      <p className="header--dark">{location}</p>
+      <p>{title}</p>
+      {location && <p className="header-item--dark">{location}</p>}
     </div>
   );
 };

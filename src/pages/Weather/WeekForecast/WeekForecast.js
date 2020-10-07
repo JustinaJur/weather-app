@@ -2,7 +2,7 @@ import React from "react";
 import "./WeekForecast.scss";
 
 import Chart from "../../../components/Chart/Chart";
-import { getDaysOfNextWeek } from "../../../utils/date.js";
+import { getDaysOfNextWeek } from "../../../utils/index.js";
 
 const WeekForecast = ({ dailyForecast }) => {
   const daysOfNextWeek = getDaysOfNextWeek();
@@ -16,7 +16,7 @@ const WeekForecast = ({ dailyForecast }) => {
           const maxTemp = Math.round(dailyForecast[index + 1].temp.max);
 
           return (
-            <div className="grid place-items--center">
+            <div key={index} className="week-forecast__body">
               {day.toUpperCase()}
               <div className="text-align--center">
                 <img

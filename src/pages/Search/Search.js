@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import "./Search.scss";
 
 import Header from "../../components/Header/Header";
-import cities from "../../data/city.list.min.json";
-
-import "./Search.scss";
+import cities from "../../data/city.list.json";
 
 const Search = (props) => {
   const [term, setTerm] = useState("");
+
+  //console.log(props.history.location.state.location);
 
   const onCityClick = (city) => {
     props.history.push({
@@ -31,7 +32,7 @@ const Search = (props) => {
                 onClick={() => onCityClick(city)}
               >
                 {parts[0]}
-                <em className="cities-item--highlighted">{match[0]}</em>
+                <span className="cities-item--highlighted">{match[0]}</span>
                 {parts[1]}
               </div>
             );
@@ -41,9 +42,11 @@ const Search = (props) => {
     );
   };
 
+  const cityName = props.history.location.state?.location;
+
   return (
     <div>
-      <Header title="Location" location="Vilnius" />
+      <Header title="Location" location={cityName} />
       <div className="search-input">
         <i className="fa fa-search icon"></i>
         <input

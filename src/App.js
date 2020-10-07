@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-//import Context from "../Context";
 import Weather from "./pages/Weather/Weather";
 import Search from "./pages/Search/Search";
 

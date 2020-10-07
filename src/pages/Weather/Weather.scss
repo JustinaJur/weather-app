@@ -1,0 +1,12 @@
+.weather {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-to-search {
+    position: absolute;
+    top: 3%;
+    right: 7%;
+}

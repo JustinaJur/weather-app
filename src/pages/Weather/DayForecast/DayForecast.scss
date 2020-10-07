@@ -1,15 +1,48 @@
 @import "../../../assets/scss/config";
 @import "../../../assets/scss/utilities";
 
-.day-forecast__header {
-  display: flex;
-  padding: 10px 10px;
-}
+.day-forecast {
+  height: 50%;
+  background: rgb(96, 118, 136);
+  background: linear-gradient(
+    172deg,
+    rgba(96, 118, 136, 1) 12%,
+    rgba(141, 166, 187, 1) 46%,
+    rgba(153, 153, 153, 1) 68%,
+    rgba(97, 99, 101, 1) 91%
+  );
 
-.day-forecast__body {
-  @extend .text-align--center;
-  background-color: #9ca4ab;
-  //backdrop-filter: blur(5px);
-  display: grid;
-  grid-gap: 50px;
+  &__header {
+    display: flex;
+    padding-right: 15px;
+    background-color: $color-secondary;
+  }
+
+  &__body {
+    @extend .text-align--center;
+    display: grid;
+    grid-template-rows: 2fr 1.5fr 2fr;
+    height: 85%;
+    place-items: center;
+
+    &-temp {
+      font-size: 80px;
+      align-self: end;
+    }
+
+    &-location {
+      font-size: 24px;
+      align-self: end;
+    }
+
+    &-description {
+      display: flex;
+      align-self: start;
+
+      p {
+        align-self: center;
+        font-size: 18px;
+      }
+    }
+  }
 }

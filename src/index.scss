@@ -9,19 +9,23 @@
 
 body {
   background-color: $color-secondary;
-  // background-color: lighten($color-secondary, 30%);
   font-family: $font-family;
   line-height: 17px;
   color: $grey-100;
 }
 
+a {
+  color: inherit;
+}
+
+//shared
 .forecast-icon {
   max-width: 30px;
 }
 
 .forecast-title {
-  font-weight: 300;
-  // padding: 10px 10px;
+  padding: 20px 10px;
+  letter-spacing: 2px;
 }
 
 .forecast-temperature {
@@ -34,7 +38,7 @@ body {
   }
 
   &--night {
-    color: $grey-600;
+    color: $grey-400;
   }
 
   p {

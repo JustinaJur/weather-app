@@ -12,39 +12,38 @@
     border: 1px solid $blue-400;
     border-radius: 5px;
     color: white;
-    margin: 0px 20px;
+    margin: 8px 20px 0px 20px;
     padding: 0px 35px;
     height: 30px;
   }
 
   .fa {
     color: $grey-100;
-  }
-
-  .fa-search {
+    top: 15px;
     position: absolute;
-    top: 7px;
-    left: 26px;
-  }
 
-  .fa-times-circle {
-    position: absolute;
-    top: 7px;
-    right: 26px;
+    &-search {
+      left: 26px;
+    }
+
+    &-times-circle {
+      right: 26px;
+    }
   }
 }
 
 .cities {
   padding-left: 26px;
   background-color: $grey-500;
-}
 
-.cities-item {
-  padding: 15px 15px 15px 0px;
-  color: $grey-600;
-  border-bottom: 1px solid $grey-600;
+  &-item {
+    font-size: 18px;
+    padding: 15px 15px 15px 0px;
+    color: $grey-400;
+    border-bottom: 1px solid $grey-400;
 
-  &--highlighted {
-    color: $grey-100;
+    &--highlighted {
+      color: $grey-100;
+    }
   }
 }

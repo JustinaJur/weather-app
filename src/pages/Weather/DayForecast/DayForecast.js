@@ -1,16 +1,18 @@
 import React from "react";
 import "./DayForecast.scss";
 
+import { firstLetterToCapital } from "../../../utils/index.js";
+
 const DayForecast = ({ daily, current, location }) => {
   const header = () => {
     return (
       <div className="day-forecast__header">
         <h3 className="forecast-title">Day Forecast</h3>
         <div className="forecast-temperature">
-          <p className="forecast-temperature--day">
+          <p className="forecast-temperature--day flex align-items--center">
             {Math.round(daily[0].temp.min)}
           </p>
-          <p className="forecast-temperature--night">
+          <p className="forecast-temperature--night flex align-items--center">
             {Math.round(daily[0].temp.max)}
           </p>
         </div>
@@ -21,10 +23,10 @@ const DayForecast = ({ daily, current, location }) => {
   const body = () => {
     return (
       <div className="day-forecast__body">
-        <h1>{Math.round(current.temp)}</h1>
-        <h2>{location}</h2>
-        <div className="flex align-items--center justify-content--center">
-          <p>{current.weather[0].description}</p>
+        <p className="day-forecast__body-temp">{Math.round(current.temp)}°</p>
+        <h2 className="day-forecast__body-location">{location}</h2>
+        <div className="day-forecast__body-description">
+          <p>{firstLetterToCapital(current.weather[0].description)}</p>
           <img
             className="forecast-icon"
             alt="weather"
@@ -36,10 +38,10 @@ const DayForecast = ({ daily, current, location }) => {
   };
 
   return (
-    <>
+    <div className="day-forecast">
       {header()}
       {body()}
-    </>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Search.scss";
 
 import Header from "../../components/Header/Header";
-import cities from "../../data/city.list.json";
+import cities from "../../data/cities.json";
 
 const Search = (props) => {
   const [term, setTerm] = useState("");
